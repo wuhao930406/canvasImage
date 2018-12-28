@@ -2,25 +2,44 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui,target-densitydpi=72">
     <title>Title</title>
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
     <div class="container">
+        <div id="hideText"></div>
         <canvas id="Canvas"></canvas>
+        <div class="imgcontain">
+            <div class="result">
+                <p>请长按图片保存</p>
+                <img src="./images/shutdown.svg" class="shutdown" onclick="hideImage()" alt=""/>
+                <img src="" id="copy" alt=""/>
+            </div>
+
+        </div>
+
+        <ul class="btngroup">
+            <li>
+                <p>重测一次</p>
+            </li>
+            <li onclick="showImage()">
+                <p>生成图片</p>
+            </li>
+            <li>
+                <p>关注我们</p>
+            </li>
+        </ul>
     </div>
-    <ul class="btngroup">
-        <li>
-            <p>重测一次</p>
-        </li>
-        <li>
-            <p>点击保存</p>
-        </li>
-        <li>
-            <p>关注我们</p>
-        </li>
-    </ul>
 </body>
 <script src="js/jquery-3.3.1.min.js"></script>
+<script style="text/javascript">
+    window.config = {
+        headimg:"./images/head.png",
+        nickname:"只有神知道的世界",
+        description:"描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字"
+    }
+</script>
+
 <script src="js/index.js"></script>
 </html>
